@@ -1,0 +1,49 @@
+:root {
+  color-scheme: dark;
+  --page: #101112;
+  --surface: #17191b;
+  --line: #303438;
+  --text: #f4f5f5;
+  --muted: #a5aaae;
+  --accent: #a8f26b;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: inherit; }
+a:hover { color: var(--accent); }
+.site-header { border-bottom: 1px solid var(--line); }
+.nav, .content, .footer-inner { width: min(calc(100% - 40px), var(--max)); margin: auto; }
+.nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+.brand-mark { display: grid; width: 22px; height: 22px; place-items: center; border: 2px solid var(--accent); border-radius: 7px; color: var(--accent); font-size: 14px; line-height: 1; }
+.nav a:not(.brand) { color: var(--muted); font-size: 14px; text-underline-offset: 4px; }
+.content { padding: 76px 0 90px; }
+.eyebrow { margin: 0 0 15px; color: var(--accent); font-size: 12px; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }
+h1, h2, h3 { letter-spacing: -.035em; line-height: 1.15; }
+h1 { max-width: 650px; margin: 0; font-size: clamp(2.45rem, 8vw, 4.5rem); }
+h2 { margin: 49px 0 12px; font-size: clamp(1.45rem, 4vw, 2rem); }
+h3 { margin: 28px 0 8px; font-size: 1.1rem; }
+p, li { color: var(--muted); }
+.lead { max-width: 590px; margin: 22px 0 0; font-size: 1.15rem; }
+.updated { margin: 29px 0 0; font-size: .88rem; }
+.updated strong { color: var(--text); }
+ul { padding-left: 1.25rem; }
+.card-list { display: grid; gap: 12px; margin-top: 40px; }
+.card { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+.card:hover { border-color: var(--accent); color: var(--text); transform: translateY(-2px); }
+.card h2 { margin: 0; font-size: 1.08rem; }.card p { margin: 3px 0 0; font-size: .92rem; }.arrow { color: var(--accent); font-size: 1.4rem; }
+.notice { margin-top: 42px; padding: 20px 22px; border-left: 3px solid var(--accent); background: var(--surface); color: var(--muted); }
+.support-box { margin-top: 38px; padding: 30px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }.support-box p { margin: 0 0 18px; }.support-box a { color: var(--accent); font-weight: 650; text-underline-offset: 4px; }
+footer { border-top: 1px solid var(--line); }.footer-inner { display: flex; justify-content: space-between; gap: 18px; padding: 26px 0; color: var(--muted); font-size: .82rem; }.footer-inner a { text-underline-offset: 3px; }
+@media (max-width: 520px) { .nav, .content, .footer-inner { width: min(calc(100% - 32px), var(--max)); }.content { padding: 54px 0 64px; }.nav { min-height: 62px; }.footer-inner { align-items: flex-start; flex-direction: column; gap: 6px; }.card { padding: 19px; }.support-box { padding: 24px; } }
